@@ -27,6 +27,7 @@ namespace WordWrap
             {
                 return "empty";
             }
+            return "";
             //throw new NotImplementedException();
         }
     }

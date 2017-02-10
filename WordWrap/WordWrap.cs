@@ -36,9 +36,9 @@ namespace WordWrap
             {
                 return "empty";
             }
-            if(finalString.ToString().Contains("*"))
-            return finalString.Append("* - indicates exceeds maxlength").ToString();
-            else
+           /* if(finalString.ToString().Contains("*"))
+            //return finalString.Append("* - indicates exceeds maxlength").ToString();
+            else*/
             {
                 return finalString.ToString();
             }
@@ -61,6 +61,13 @@ namespace WordWrap
         {
             string returnValue = WordWrap.Wrap("This is",4 );
             Assert.AreEqual(returnValue, "This\nis");
+
+        }
+        [Test]
+        public void wordWrap_CheckStringData1_ExceedsMaxlength()
+        {
+            string returnValue = WordWrap.Wrap("This is", 3);
+            Assert.AreEqual(returnValue, "This*\nis");
 
         }
     }

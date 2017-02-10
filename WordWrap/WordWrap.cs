@@ -54,7 +54,7 @@ namespace WordWrap
         public void wordWrap_CheckStringData1_NotExceedsMaxlength()
         {
             string returnValue = WordWrap.Wrap("This is",4 );
-            Assert.AreEqual(returnValue, "This \n is");
+            Assert.AreEqual(returnValue, "This\nis");
 
         }
     }

@@ -25,8 +25,10 @@ namespace WordWrap
                         finalString.Append(item + "*" + "\n");
                     else
                     {
-                        if(i < wordSplit.Length - 1)
-                        finalString.Append(item + "\n");
+                       
+                            finalString.Append(item);
+                        if (i < wordSplit.Length - 1)
+                            finalString.Append("\n");
                     }
                 }
             }

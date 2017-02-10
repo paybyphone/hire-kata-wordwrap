@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using NUnit.Framework;
 
 namespace WordWrap
@@ -8,26 +9,33 @@ namespace WordWrap
         public static string Wrap(string input, int maxLength)
         {
             // this is divys
-        /*this
-         * is
-         *  
-          */
+            /*this
+             * is
+             *  
+              */
+            StringBuilder finalString = new StringBuilder();
+
             if (!String.IsNullOrEmpty(input))
             {
                 string[] wordSplit = input.Split(' ');
                 foreach (var item in wordSplit)
                 {
                     if (item.Length > maxLength)
-                        return item + " :exceeds maxlength ";
+                        finalString.Append(item + "*" +"\n");
                     else
-                        return item;
+                         finalString.Append(item + "\n");
                 }
             }
             else
             {
                 return "empty";
             }
-            return "";
+            if(finalString.ToString().Contains("*"))
+            return finalString.Append("* - indicates exceeds maxlength").ToString();
+            else
+            {
+                return finalString.ToString();
+            }
             //throw new NotImplementedException();
         }
     }
@@ -40,6 +48,13 @@ namespace WordWrap
         {
             string returnValue = WordWrap.Wrap("", 2);
             Assert.AreEqual(returnValue, "empty");
+
+        }
+        [Test]
+        public void wordWrap_CheckStringData1_NotExceedsMaxlength()
+        {
+            string returnValue = WordWrap.Wrap("This is",4 );
+            Assert.AreEqual(returnValue, "This \n is");
 
         }
     }

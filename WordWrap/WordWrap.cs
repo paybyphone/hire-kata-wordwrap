@@ -18,12 +18,16 @@ namespace WordWrap
             if (!String.IsNullOrEmpty(input))
             {
                 string[] wordSplit = input.Split(' ');
-                foreach (var item in wordSplit)
+                for (int i=0;i<wordSplit.Length;i++)
                 {
+                    string item = wordSplit[i];
                     if (item.Length > maxLength)
-                        finalString.Append(item + "*" +"\n");
+                        finalString.Append(item + "*" + "\n");
                     else
-                         finalString.Append(item + "\n");
+                    {
+                        if(i < wordSplit.Length - 1)
+                        finalString.Append(item + "\n");
+                    }
                 }
             }
             else

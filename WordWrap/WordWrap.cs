@@ -21,14 +21,12 @@ namespace WordWrap
                 for (int i=0;i<wordSplit.Length;i++)
                 {
                     string item = wordSplit[i];
-                    if (item.Length > maxLength)
-                        finalString.Append(item + "*" + "\n");
+                    
+                    if (finalString.Length + item.Length + 1 < maxLength)
+                        finalString.Append(item + " ");
                     else
                     {
-                       
-                            finalString.Append(item);
-                        if (i < wordSplit.Length - 1)
-                            finalString.Append("\n");
+                        finalString.Append("\n"+ item);
                     }
                 }
             }
@@ -60,7 +58,7 @@ namespace WordWrap
         public void wordWrap_CheckStringData1_NotExceedsMaxlength()
         {
             string returnValue = WordWrap.Wrap("This is",4 );
-            Assert.AreEqual(returnValue, "This\nis");
+            Assert.AreEqual(returnValue, "This \nis");
 
         }
         [Test]

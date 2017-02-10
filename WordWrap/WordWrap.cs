@@ -39,7 +39,7 @@ namespace WordWrap
         public void wordWrap_CheckEmptyString()
         {
             string returnValue = WordWrap.Wrap("", 2);
-            Assert.Equals(returnValue, "empty");
+            Assert.AreEqual(returnValue, "empty");
 
         }
     }

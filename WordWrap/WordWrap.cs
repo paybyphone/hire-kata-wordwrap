@@ -21,12 +21,13 @@ namespace WordWrap
                 for (int i=0;i<wordSplit.Length;i++)
                 {
                     string item = wordSplit[i];
-                    
-                    if (finalString.Length + item.Length + 1 < maxLength)
+                    if (finalString.Length == 0 && finalString.Length + item.Length < maxLength)
+                        finalString.Append(item);
+                    else if (finalString.Length + item.Length + 1 < maxLength)
                         finalString.Append(item + " ");
                     else
                     {
-                        finalString.Append("\n"+ item);
+                        finalString.Append("\n" + item);
                     }
                 }
             }

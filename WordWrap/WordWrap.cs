@@ -24,7 +24,7 @@ namespace WordWrap
                     if (finalString.Length == 0 && finalString.Length + item.Length < maxLength)
                         finalString.Append(item);
                     else if (finalString.Length + item.Length + 1 < maxLength)
-                        finalString.Append(item + " ");
+                        finalString.Append(" " +item);
                     else
                     {
                         finalString.Append("\n" + item);

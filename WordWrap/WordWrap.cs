@@ -23,7 +23,7 @@ namespace WordWrap
                     string item = wordSplit[i];
                     if (finalString.Length == 0 && finalString.Length + item.Length < maxLength)
                         finalString.Append(item);
-                    else if (finalString.Length + item.Length + 1 < maxLength)
+                    else if (finalString.Length + item.Length + 1 <= maxLength)
                         finalString.Append(" " +item);
                     else
                     {

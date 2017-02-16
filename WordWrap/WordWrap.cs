@@ -28,7 +28,7 @@ namespace WordWrap
             var l = s.Split(' ');
             foreach (var word in l)
             {
-                if (count+word.Length>maxLength)
+                if (count+word.Length>=maxLength)
                 {
                     return count;
                 }

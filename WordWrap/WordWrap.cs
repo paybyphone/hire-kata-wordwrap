@@ -28,9 +28,9 @@ namespace WordWrap
             var l = s.Split(' ');
             foreach (var word in l)
             {
-                if (count+word.Length>=maxLength)
+                if (count+word.Length>maxLength)
                 {
-                    return count+word.Length;
+                    return count;
                 }
                 count = count+ word.Length+1;
             }
@@ -61,7 +61,7 @@ namespace WordWrap
         public void HappyPathTest()
         {
             var testString = "This is a test";
-            var max = 6;
+            var max = 7;
             var resp = WordWrap.Wrap(testString, max);
             if (resp.Equals("This is\na test"))
             {

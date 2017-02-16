@@ -26,13 +26,19 @@ namespace WordWrap
     public class WordWrapTests
     {
         [Test]
-        public void write_your_first_test_here()
+        public void EmptyStringTest()
         {
-            var testString = "this is a test string need to be long";
-            var max = 4;
+            var testString = "";
+            var max = 1;
             var resp = WordWrap.Wrap(testString, max);
-
-            Assert.That(true, Is.True);
+            if (resp.Length == 0)
+            {
+                Assert.That(true, Is.True);
+            }
+            else
+            {
+                Assert.That(true, Is.False);
+            }
         }
     }
 }

@@ -30,7 +30,7 @@ namespace WordWrap
             {
                 if (count+word.Length>=maxLength)
                 {
-                    return count;
+                    return count+word.Length;
                 }
                 count = count+ word.Length+1;
             }
@@ -61,7 +61,7 @@ namespace WordWrap
         public void HappyPathTest()
         {
             var testString = "This is a test";
-            var max = 7;
+            var max = 6;
             var resp = WordWrap.Wrap(testString, max);
             if (resp.Equals("This is\na test"))
             {

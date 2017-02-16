@@ -17,8 +17,24 @@ namespace WordWrap
             }
             else
             {
+                var length = GetMaxLength(input, maxLineLength);
                 return input.Substring(0, maxLineLength) + "\n" + Wrap(input.Substring(maxLineLength), maxLineLength);
             }
+        }
+
+        private static int GetMaxLength(string s, int maxLength)
+        {
+            var count = 0;
+            var l = s.Split(' ');
+            foreach (var word in l)
+            {
+                if (count+word.Length>maxLength)
+                {
+                    return count;
+                }
+                count = count+ word.Length+1;
+            }
+            return maxLength;
         }
     }
 

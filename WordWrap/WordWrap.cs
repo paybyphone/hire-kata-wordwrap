@@ -18,7 +18,7 @@ namespace WordWrap
             else
             {
                 var length = GetMaxLength(input, maxLineLength);
-                return input.Substring(0, maxLineLength) + "\n" + Wrap(input.Substring(maxLineLength), maxLineLength);
+                return input.Substring(0, length) + "\n" + Wrap(input.Substring(length+1), maxLineLength);
             }
         }
 

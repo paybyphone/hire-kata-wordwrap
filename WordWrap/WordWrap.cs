@@ -40,5 +40,21 @@ namespace WordWrap
                 Assert.That(true, Is.False);
             }
         }
+
+        [Test]
+        public void HappyPathTest()
+        {
+            var testString = "This is a test";
+            var max = 7;
+            var resp = WordWrap.Wrap(testString, max);
+            if (resp.Equals("This is\na test"))
+            {
+                Assert.That(true, Is.True);
+            }
+            else
+            {
+                Assert.That(true, Is.False);
+            }
+        }
     }
 }

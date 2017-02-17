@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 
 namespace WordWrap
@@ -14,24 +15,27 @@ namespace WordWrap
         //  both return "This is\na test".
         public static string Wrap(string input, int maxLength)
         {
-            List<String> list = new List<String>();
-            String leftString = "";
-            String nextString = "";
-            int startposition = 0;
-            int endposition = maxLength;
-            String cutChar = input.Substring(maxLength, maxLength + 1);
+            String[] words = input.Split(' ');
+            int lineLenght = maxLength;
+            String line = "";
+            String output;
 
-            do
+            foreach(String word in words)
             {
-                if (cutChar.Equals(" "))
+
+                if (line.Length + word.Length <= lineLenght)
                 {
-                    leftString = input.Substring(startposition, maxLength);
+                    line = String.Concat(line, " ", word);
                 }
 
+                else
+                {
+                    line = String.Concat(line, "\n");
+                    lineLenght += maxLength;
+                }
 
-
-
-            } while (endposition <= maxLength);
+            }
+            return line;
         }
     }
 

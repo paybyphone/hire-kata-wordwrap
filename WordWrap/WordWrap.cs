@@ -49,7 +49,7 @@ namespace WordWrap
         {
             
             String testA = "This is a test";
-            String testExpectationA = "This is a \na test";
+            String testExpectationA = "This is\na test";
             String testB = "I am also a test";
             int testIntA = 7;
             int testIntB = 8;

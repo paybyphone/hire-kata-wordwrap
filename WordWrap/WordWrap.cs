@@ -54,7 +54,7 @@ namespace WordWrap
             String testExpectationB = "test";
             int testIntA = 7;
             int testIntB = 8;
-            Assert.True(testExpectationA.Equals(WordWrap.Wrap(testb, testIntA)));
+            Assert.True(testExpectationB.Equals(WordWrap.Wrap(testB, testIntA)));
         }
     }
 }

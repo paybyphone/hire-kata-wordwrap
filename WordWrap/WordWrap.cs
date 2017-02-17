@@ -30,7 +30,7 @@ namespace WordWrap
 
                 else
                 {
-                    line = String.Concat(line, "\n");
+                    line = String.Concat(line, "\n", word);
                     lineLenght += maxLength;
                 }
 

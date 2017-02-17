@@ -50,10 +50,11 @@ namespace WordWrap
             
             String testA = "This is a test";
             String testExpectationA = "This is\na test";
-            String testB = "I am also a test";
+            String testB = "test";
+            String testExpectationB = "test";
             int testIntA = 7;
             int testIntB = 8;
-            Assert.True(testExpectationA.Equals(WordWrap.Wrap(testA, testIntA)));
+            Assert.True(testExpectationA.Equals(WordWrap.Wrap(testb, testIntA)));
         }
     }
 }

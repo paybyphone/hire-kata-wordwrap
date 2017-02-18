@@ -35,7 +35,7 @@ namespace WordWrap
                 }
 
             }
-            return line;
+            return line.TrimEnd();
         }
     }
 

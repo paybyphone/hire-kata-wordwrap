@@ -20,11 +20,17 @@ namespace WordWrap
     [TestFixture]
     public class WordWrapTests
     {
-        // You can run unit tests by right-clicking on the circle left of the test
-        //  method.
+        // You can run unit tests by right-clicking on the circle to the left of the test
+        //  method's line number.
         [Test]
         public void write_your_first_test_here()
         {
+            // NUnit assertions follow the form:
+            //  Assert.That(testResult, Is.Predicate(expression));
+            // For example:
+            //  Assert.That(someString,     Is.EqualTo("foo"));
+            //  Assert.That(someInt,        Is.LessThan(42));
+            //  Assert.That(someCollection, Is.Not.Empty);
             Assert.That(true, Is.True);
         }
     }

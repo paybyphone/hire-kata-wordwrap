@@ -13,7 +13,7 @@ namespace WordWrap
         //  both return "This is\na test".
         public static string Wrap(string input, int maxLength)
         {
-            return "";
+            return input;
         }
     }
 

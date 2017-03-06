@@ -34,6 +34,7 @@ namespace WordWrap
             Assert.That(true, Is.True);
             Assert.That(WordWrap.Wrap("", 5), Is.EqualTo(""));
             Assert.That(WordWrap.Wrap("I am Jack", 15), Is.EqualTo("I am Jack"));
+            Assert.That(WordWrap.Wrap("I am Jack", 5), Is.EqualTo("I am\n Jack"));
         }
     }
 }

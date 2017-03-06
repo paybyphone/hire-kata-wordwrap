@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace WordWrap
@@ -17,21 +18,22 @@ namespace WordWrap
             {
                 return string.Empty;
             }
-            string delimiter = "\n";
             if (maxLength > input.Length)
             {
-                maxLength = input.Length;
-                delimiter = "";
+                return input;
             }
-
-            string front = input.Substring(0, maxLength-1);
-            string back = input.Substring(maxLength-1);
-            string result = string.Empty;
-            result += front;
-            result += delimiter;
-            result += back;
-
-            return result;
+            else
+            {
+                var charArray = input.ToCharArray()
+                charArray[maxLength] = '\n';
+                return (string)charInput;
+            }
+            //string front = input.Substring(0, maxLength-1);
+            //string back = input.Substring(maxLength-1);
+            //string result = string.Empty;
+            //result += front;
+            //result += delimiter;
+            //result += back;
         }
     }
 

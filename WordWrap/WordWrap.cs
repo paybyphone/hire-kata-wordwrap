@@ -26,7 +26,7 @@ namespace WordWrap
             {
                 var charArray = input.ToCharArray();
                 charArray[maxLength] = '\n';
-                return (string) charArray;
+                return charArray.ToString();
             }
             //string front = input.Substring(0, maxLength-1);
             //string back = input.Substring(maxLength-1);

@@ -23,12 +23,14 @@ namespace WordWrap
                 maxLength = input.Length;
                 delimiter = "";
             }
+
             string front = input.Substring(0, maxLength-1);
             string back = input.Substring(maxLength-1);
             string result = string.Empty;
             result += front;
             result += delimiter;
             result += back;
+
             return result;
         }
     }
@@ -65,6 +67,12 @@ namespace WordWrap
         public void test_with_word_wrap()
         {
             Assert.That(WordWrap.Wrap("I am Jack", 5), Is.EqualTo("I am\n Jack"));
+        }
+
+        [Test]
+        public void test_with_mid_word_line_break()
+        {
+            Assert.That(WordWrap.Wrap("lo ngwo", 5), Is.EqualTo("lo\n ngwo"));
         }
     }
 }

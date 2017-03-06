@@ -62,7 +62,6 @@ namespace WordWrap
         [Test]
         public void test_with_word_wrap()
         {
-
             Assert.That(WordWrap.Wrap("I am Jack", 5), Is.EqualTo("I am\n Jack"));
         }
     }

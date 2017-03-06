@@ -66,13 +66,13 @@ namespace WordWrap
         [Test]
         public void test_with_word_wrap()
         {
-            Assert.That(WordWrap.Wrap("I am Jack", 5), Is.EqualTo("I am\n Jack"));
+            Assert.That(WordWrap.Wrap("I am Jack", 5), Is.EqualTo("I am\nJack"));
         }
 
         [Test]
         public void test_with_mid_word_line_break()
         {
-            Assert.That(WordWrap.Wrap("lo ngwo", 5), Is.EqualTo("lo\n ngwo"));
+            Assert.That(WordWrap.Wrap("lo ngwo", 5), Is.EqualTo("lo\nngwo"));
         }
     }
 }

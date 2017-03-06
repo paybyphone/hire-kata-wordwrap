@@ -23,7 +23,10 @@ namespace WordWrap
             }
             string front = input.Substring(0, maxLength-1);
             string back = input.Substring(maxLength);
-            string result = front + "\n" + back;
+            string result = string.Empty;
+            result += front;
+            result += "\n";
+            result += back;
             return result;
         }
     }

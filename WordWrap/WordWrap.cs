@@ -17,15 +17,17 @@ namespace WordWrap
             {
                 return string.Empty;
             }
+            string delimiter = "\n"
             if (maxLength > input.Length)
             {
                 maxLength = input.Length;
+                delimiter = "";
             }
             string front = input.Substring(0, maxLength-1);
             string back = input.Substring(maxLength);
             string result = string.Empty;
             result += front;
-            result += "\n";
+            result += delimiter;
             result += back;
             return result;
         }

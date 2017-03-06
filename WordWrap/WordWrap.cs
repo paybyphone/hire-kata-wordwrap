@@ -25,7 +25,7 @@ namespace WordWrap
             else
             {
                 var charArray = input.ToCharArray();
-                charArray[maxLength] = '\n';
+                charArray[maxLength -1] = '\n';
                 string result = new string(charArray);
 
                 return result;

@@ -46,8 +46,23 @@ namespace WordWrap
             //  Assert.That(someInt,        Is.LessThan(42));
             //  Assert.That(someCollection, Is.Not.Empty);
             Assert.That(true, Is.True);
+        }
+
+        [Test]
+        public void test_empty_string()
+        {
             Assert.That(WordWrap.Wrap("", 5), Is.EqualTo(""));
+        }
+        [Test]
+        public void test_no_word_wrap()
+        {
             Assert.That(WordWrap.Wrap("I am Jack", 15), Is.EqualTo("I am Jack"));
+        }
+
+        [Test]
+        public void test_with_word_wrap()
+        {
+
             Assert.That(WordWrap.Wrap("I am Jack", 5), Is.EqualTo("I am\n Jack"));
         }
     }

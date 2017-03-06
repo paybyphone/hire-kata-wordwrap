@@ -24,7 +24,7 @@ namespace WordWrap
                 delimiter = "";
             }
             string front = input.Substring(0, maxLength-1);
-            string back = input.Substring(maxLength);
+            string back = input.Substring(maxLength-1);
             string result = string.Empty;
             result += front;
             result += delimiter;

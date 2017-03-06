@@ -88,5 +88,10 @@ namespace WordWrap
         {
             Assert.That(WordWrap.Wrap("lo ngwo", 5), Is.EqualTo("lo\nngwo"));
         }
+        [Test]
+        public void test_with_multiple_line_break()
+        {
+            Assert.That(WordWrap.Wrap("lo ngw oad", 5), Is.EqualTo("lo\nngw\noad"));
+        }
     }
 }

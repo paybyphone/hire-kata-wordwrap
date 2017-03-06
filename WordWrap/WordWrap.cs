@@ -25,17 +25,24 @@ namespace WordWrap
             else
             {
                 var charArray = input.ToCharArray();
-                
                 int replaceIndex = -1;
-                for (int i = maxLength - 1; i > 0; i--)
+                for (int j = 0; j > input.Length; j++)
                 {
-                    if (charArray[i] == ' ')
+                    if(j == maxLength)
+                    { 
+                    for (int i = maxLength - 1; i > 0; i--)
                     {
-                        replaceIndex = i;
-                        break;
+                        if (charArray[i] == ' ')
+                        {
+                            replaceIndex = i;
+                            break;
+                        }
                     }
+                    charArray[replaceIndex] = '\n';
+                    }
+                    j = replaceIndex;
                 }
-                charArray[replaceIndex] = '\n';
+                
                 string result = new string(charArray);
 
                 return result;

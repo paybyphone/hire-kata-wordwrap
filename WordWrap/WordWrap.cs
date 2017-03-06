@@ -41,6 +41,7 @@ namespace WordWrap
                         charArray[replaceIndex] = '\n';
                     }
                     j = replaceIndex;
+                    maxLength += j;
                 }
 
                 string result = new string(charArray);

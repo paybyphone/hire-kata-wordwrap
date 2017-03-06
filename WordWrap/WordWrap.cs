@@ -13,7 +13,10 @@ namespace WordWrap
         //  both return "This is\na test".
         public static string Wrap(string input, int maxLength)
         {
-            return input;
+            string front = input.Substring(0, maxLength);
+            string back = input.Substring(maxLength + 1);
+            string result = front + "\n" + back;
+            return result;
         }
     }
 

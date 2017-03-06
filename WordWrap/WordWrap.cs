@@ -27,7 +27,7 @@ namespace WordWrap
                 var charArray = input.ToCharArray();
                 
                 int replaceIndex = -1;
-                for (int i = maxLength - 1; i < 0; i++)
+                for (int i = maxLength - 1; i > 0; i--)
                 {
                     if (charArray[i] == ' ')
                     {

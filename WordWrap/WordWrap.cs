@@ -17,7 +17,7 @@ namespace WordWrap
             {
                 return string.Empty;
             }
-            string delimiter = "\n"
+            string delimiter = "\n";
             if (maxLength > input.Length)
             {
                 maxLength = input.Length;

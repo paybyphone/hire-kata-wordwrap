@@ -13,6 +13,10 @@ namespace WordWrap
         //  both return "This is\na test".
         public static string Wrap(string input, int maxLength)
         {
+            if (string.IsNullOrEmpty((input)))
+            {
+                return string.Empty;
+            }
             if (maxLength > input.Length)
             {
                 maxLength = input.Length;

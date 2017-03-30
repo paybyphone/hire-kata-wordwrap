@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using NUnit.Framework;
 
 namespace WordWrap
@@ -13,6 +14,34 @@ namespace WordWrap
         //  both return "This is\na test".
         public static string Wrap(string input, int maxLength)
         {
+            string returnText = "";
+          
+            bool isOverMaxLength = (input.Length > maxLength);
+
+            if (isOverMaxLength)
+            {
+                //find last space
+
+                int lastSpaceIndex = input.LastIndexOf(" ");
+
+                var strBuilder = new StringBuilder(input);
+
+                strBuilder.Remove(lastSpaceIndex,1);
+                strBuilder.Insert(lastSpaceIndex,Environment.NewLine);
+
+                returnText = strBuilder.ToString();
+            }
+
+
+            return returnText;
+
+
+            // IsOverMaxLength
+
+            // LastSpacePosition
+
+            // Replace last space with carraige return
+
 
 
             return "nothing";

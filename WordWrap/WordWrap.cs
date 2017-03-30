@@ -18,33 +18,43 @@ namespace WordWrap
           
             bool isOverMaxLength = (input.Length > maxLength);
 
+
+
             if (isOverMaxLength)
             {
+
+                var words = input.Split(' ');
+
+                int wordCount = words.Length;                
+
+
+
+                foreach (var word in words)
+                {
+                    
+                    if (returnText.Length > maxLength)
+                    {
+                       returnText += word; 
+
+                    }
+
+                    returnText += Environment.NewLine;
+
+                    
+                }
+
                 //find last space
 
-                int lastSpaceIndex = input.LastIndexOf(" ");
+                //int lastSpaceIndex = input.LastIndexOf(" ");
 
-                var strBuilder = new StringBuilder(input);
+                //var strBuilder = new StringBuilder(input);
 
-                strBuilder.Remove(lastSpaceIndex,1);
-                strBuilder.Insert(lastSpaceIndex,Environment.NewLine);
+                //strBuilder.Remove(lastSpaceIndex,1);
+                //strBuilder.Insert(lastSpaceIndex,Environment.NewLine);
 
-                returnText = strBuilder.ToString();
+
             }
-
-
             return returnText;
-
-
-            // IsOverMaxLength
-
-            // LastSpacePosition
-
-            // Replace last space with carraige return
-
-
-
-            return "nothing";
             //throw new NotImplementedException();
         }
     }

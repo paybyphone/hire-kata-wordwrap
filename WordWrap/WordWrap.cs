@@ -15,7 +15,7 @@ namespace WordWrap
         public static string Wrap(string input, int maxLength)
         {
             string returnText = "";
-          
+
             bool isOverMaxLength = (input.Length > maxLength);
 
 
@@ -25,22 +25,32 @@ namespace WordWrap
 
                 var words = input.Split(' ');
 
-                int wordCount = words.Length;                
+                int wordCount = words.Length;
 
-
+                int wordsDealtWith = 0;
 
                 foreach (var word in words)
                 {
-                    
-                    if (returnText.Length > maxLength)
+
+
+
+                    while (wordsDealtWith != wordCount)
                     {
-                       returnText += word; 
+
+                        if (returnText.Length < maxLength)
+                        {
+                            returnText += word;
+                            wordsDealtWith++;
+
+                        }
 
                     }
 
-                    returnText += Environment.NewLine;
 
-                    
+
+                    //returnText += Environment.NewLine;
+
+
                 }
 
                 //find last space

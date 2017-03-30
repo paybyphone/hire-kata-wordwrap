@@ -44,38 +44,7 @@ namespace WordWrap
             //Assert.That(true, Is.True);
         }
 
-        public void write_your_first_test_here()
-        {
-            // NUnit assertions follow the form:
-            //  Assert.That(testResult, Is.Predicate(expression));
-            // For example:
-            //  Assert.That(someString,     Is.EqualTo("foo"));
-            //  Assert.That(someInt,        Is.LessThan(42));
-            //  Assert.That(someCollection, Is.Not.Empty);
-            Assert.That(true, Is.True);
-        }
 
-        public void write_your_first_test_here()
-        {
-            // NUnit assertions follow the form:
-            //  Assert.That(testResult, Is.Predicate(expression));
-            // For example:
-            //  Assert.That(someString,     Is.EqualTo("foo"));
-            //  Assert.That(someInt,        Is.LessThan(42));
-            //  Assert.That(someCollection, Is.Not.Empty);
-            Assert.That(true, Is.True);
-        }
-
-        public void write_your_first_test_here()
-        {
-            // NUnit assertions follow the form:
-            //  Assert.That(testResult, Is.Predicate(expression));
-            // For example:
-            //  Assert.That(someString,     Is.EqualTo("foo"));
-            //  Assert.That(someInt,        Is.LessThan(42));
-            //  Assert.That(someCollection, Is.Not.Empty);
-            Assert.That(true, Is.True);
-        }
 
     }
 }

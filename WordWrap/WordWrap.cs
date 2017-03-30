@@ -13,7 +13,10 @@ namespace WordWrap
         //  both return "This is\na test".
         public static string Wrap(string input, int maxLength)
         {
-            throw new NotImplementedException();
+
+
+            return "nothing";
+            //throw new NotImplementedException();
         }
     }
 
@@ -25,6 +28,24 @@ namespace WordWrap
         [Test]
         public void write_your_first_test_here()
         {
+
+            string result = WordWrap.Wrap("Given an input string of words separated by spaces, and a maximum line length", 20);
+
+            Assert.That(result == "nothing", Is.True);
+
+
+            // NUnit assertions follow the form:
+            //  Assert.That(testResult, Is.Predicate(expression));
+            // For example:
+            //  Assert.That(someString,     Is.EqualTo("foo"));
+            //  Assert.That(someInt,        Is.LessThan(42));
+            //  Assert.That(someCollection, Is.Not.Empty);
+
+            //Assert.That(true, Is.True);
+        }
+
+        public void write_your_first_test_here()
+        {
             // NUnit assertions follow the form:
             //  Assert.That(testResult, Is.Predicate(expression));
             // For example:
@@ -33,5 +54,28 @@ namespace WordWrap
             //  Assert.That(someCollection, Is.Not.Empty);
             Assert.That(true, Is.True);
         }
+
+        public void write_your_first_test_here()
+        {
+            // NUnit assertions follow the form:
+            //  Assert.That(testResult, Is.Predicate(expression));
+            // For example:
+            //  Assert.That(someString,     Is.EqualTo("foo"));
+            //  Assert.That(someInt,        Is.LessThan(42));
+            //  Assert.That(someCollection, Is.Not.Empty);
+            Assert.That(true, Is.True);
+        }
+
+        public void write_your_first_test_here()
+        {
+            // NUnit assertions follow the form:
+            //  Assert.That(testResult, Is.Predicate(expression));
+            // For example:
+            //  Assert.That(someString,     Is.EqualTo("foo"));
+            //  Assert.That(someInt,        Is.LessThan(42));
+            //  Assert.That(someCollection, Is.Not.Empty);
+            Assert.That(true, Is.True);
+        }
+
     }
 }

@@ -24,7 +24,9 @@ namespace WordWrap
 
             foreach (string word in initialWords)
             {
+                
                 result += word;
+                total += word.Count();
             }
 
             return result;

@@ -36,6 +36,7 @@ namespace WordWrap
                     if (maxLength > total)
                     {
                         result += " ";
+                        total += 1;
                     }
 
                     total += word.Count() + 1;

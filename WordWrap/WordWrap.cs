@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace WordWrap
 {
@@ -13,7 +14,7 @@ namespace WordWrap
         //  both return "This is\na test".
         public static string Wrap(string input, int maxLength)
         {
-            
+            List<string> initialWords = new List<string>();
         }
     }
 

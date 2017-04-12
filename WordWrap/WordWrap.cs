@@ -13,7 +13,7 @@ namespace WordWrap
         //  both return "This is\na test".
         public static string Wrap(string input, int maxLength)
         {
-            throw new NotImplementedException();
+            
         }
     }
 
@@ -31,7 +31,11 @@ namespace WordWrap
             //  Assert.That(someString,     Is.EqualTo("foo"));
             //  Assert.That(someInt,        Is.LessThan(42));
             //  Assert.That(someCollection, Is.Not.Empty);
-            Assert.That(true, Is.True);
+            string result = WordWrap.Wrap("This is a test", 7);
+
+            Assert.AreEqual("This is\na test", result);
+
+            
         }
     }
 }

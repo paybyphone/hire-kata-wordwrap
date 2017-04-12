@@ -26,7 +26,9 @@ namespace WordWrap
             {
                 result += word;
             }
-            
+
+            return result;
+
         }
     }
 

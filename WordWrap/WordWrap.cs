@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WordWrap
 {
@@ -15,6 +16,10 @@ namespace WordWrap
         public static string Wrap(string input, int maxLength)
         {
             List<string> initialWords = new List<string>();
+
+            initialWords = input.Split(' ').ToList();
+
+            
         }
     }
 

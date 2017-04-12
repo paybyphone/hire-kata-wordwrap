@@ -32,6 +32,7 @@ namespace WordWrap
                 else
                 {
                     result += word;
+                    total += word.Count();
 
                     if (maxLength > total)
                     {
@@ -39,7 +40,7 @@ namespace WordWrap
                         total++;
                     }
 
-                    total += word.Count();
+                   
                 }
 
             }

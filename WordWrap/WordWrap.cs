@@ -24,9 +24,16 @@ namespace WordWrap
 
             foreach (string word in initialWords)
             {
-                
-                result += word;
-                total += word.Count();
+                if (total > maxLength)
+                {
+                    result += "\n";
+                }
+                else
+                {
+                    result += word;
+                    total += word.Count();
+                }
+
             }
 
             return result;

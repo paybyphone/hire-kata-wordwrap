@@ -33,7 +33,7 @@ namespace WordWrap
                 {
                     result += word;
 
-                    if (maxLength > total)
+                    if (maxLength >= total)
                     {
                         result += " ";
                     }

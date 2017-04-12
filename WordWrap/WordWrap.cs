@@ -33,7 +33,7 @@ namespace WordWrap
                 {
                     result += word;
                     result += " ";
-                    total += word.Count()+1;
+                    total += word.Count() + 1;
                 }
 
             }

@@ -24,7 +24,7 @@ namespace WordWrap
 
             foreach (string word in initialWords)
             {
-                if (total > maxLength)
+                if (total >= maxLength)
                 {
                     result += "\n";
                     total = 0;

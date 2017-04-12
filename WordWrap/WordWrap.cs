@@ -19,6 +19,13 @@ namespace WordWrap
 
             initialWords = input.Split(' ').ToList();
 
+            int total = 0;
+            string result = string.Empty;
+
+            foreach (string word in initialWords)
+            {
+                result += word;
+            }
             
         }
     }

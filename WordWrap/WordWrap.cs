@@ -27,6 +27,7 @@ namespace WordWrap
                 if (total > maxLength)
                 {
                     result += "\n";
+                    total = 0;
                 }
                 else
                 {
